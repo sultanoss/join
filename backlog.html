@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Lato:wght@300&family=Lobster+Two:ital@1&family=PT+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <script src="mini_backend.js"></script>
+    <script src="backlog.js"></script>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Backlog</title>
+  </head>
+
+  <body onload="init2()">
+    <img id="mobile-menu" src="img/menu-4-64.png" onclick="showMobileMenu()" />
+
+    <div class="backlog-container">
+      <div id="mobile" class="menu">
+        <img id="join-logo" src="img/joinlogo.png" />
+        <a href="board.html">Board</a>
+        <a href="backlog.html">Backlog</a>
+        <a href="index.html">Add Task</a>
+        <a href="help.html">Help</a>
+        <!-- <a href="login.html">Logout</a> -->
+        <img
+          id="close-arrow"
+          class="close-arrow"
+          src="img/closArrow.png"
+          onclick="hideMobileMenu()"
+        />
+      </div>
+
+      <div class="header2">
+        <div class="title">
+          <h1>Backlog</h1>
+          <p>Learning Management System Project</p>
+        </div>
+
+        <div class="backlog-titles">
+          <span>ASSIGNED TO</span>
+          <span id="title-category">CATEGORY</span>
+          <span>DESCRIPTION</span>
+        </div>
+
+        <div id="task-info" class="task-infos">
+          <span>Zurzeit gibt es keine Tasks</span>
+        </div>
+
+        <div id="backlog-content"></div>
+      </div>
+    </div>
+  </body>
+</html>

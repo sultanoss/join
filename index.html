@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Lato:wght@300&family=Lobster+Two:ital@1&family=PT+Sans&display=swap"
+        rel="stylesheet">
+    <script src="mini_backend.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="login.js"></script>
+    <script src="main.js"></script>
+    <title>AddTask</title>
+</head>
+
+<body onload="init()">
+    
+    <img id="mobile-menu" src="img/menu-4-64.png" onclick="showMobileMenu()">
+
+    <div class="addtask-container">
+
+        <div id="mobile" class="menu">
+
+            <img id="join-logo" src="img/joinlogo.png">
+            <a href="board.html">Board</a>
+            <a href="backlog.html">Backlog</a>
+            <a href="index.html">Add Task</a>
+            <a href="help.html">Help</a>
+            <!-- <a href="login.html">Logout</a> -->
+            <img id="close-arrow" class="close-arrow" src="img/closArrow.png" onclick="hideMobileMenu()">
+        </div>
+
+        <div class="header2">
+            <div class="title">
+                <h1>Add Task</h1>
+                <p>Learning Management System Project</p>
+
+            </div>
+
+            <div class="content">
+                <div class="row1">
+
+                    <div class="title">
+                        <h3>TITLE</h3>
+                        <input id="title-input" class="title-input" type="text" placeholder="z.B Aufgabe 1">
+                    </div>
+
+                    <div class="date">
+                        <h3>DUE DATE</h3>
+                        <input id="date-input" class="date-input" type="date">
+                    </div>
+                </div>
+
+                <div class="row2">
+
+                    <div class="category1">
+                        <h3>CATEGORY</h3>
+                        <select id="category" class="category-input">
+                            <option value="Current project">Current Project</option>
+                            <option value="Sale">Sale</option>
+                            <option value="Product">Product</option>
+                        </select>
+                    </div>
+
+                    <div class="urgency">
+                        <h3>URGENCY</h3>
+                        <select id="urgency" class="urgency-input">
+                            <option value="high">High</option>
+                            <option value="Medium">Medium</option>
+                            <option value="low">Low</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="row3">
+
+                    <div class="discription">
+                        <h3>DESCRIPTION</h3>
+                        <textarea id="discription-text" placeholder="z.B Deine Beschreibung"></textarea>
+                    </div>
+
+                    <div class="user">
+                        <h3>ASSIGNED TO</h3>
+                        <div class="assigned-section">
+                            <img src="img/meinbild.jpg">
+                            <img class="assigned-btn" src="img/icons8-plus.png" onclick="addUser1()">
+                            <img id="checked" class="checked" src="img/check-mark-7-24.png">
+                        </div>
+                        <div class="assigned-section">
+                            <img src="img/autorennen.jpg">
+                            <img class="assigned-btn" src="img/icons8-plus.png" onclick="addUser2()">
+                            <img id="checked2" class="checked" src="img/check-mark-7-24.png">
+                        </div>
+                        <div class="assigned-section">
+                            <img src="img/mottorad1.jpg">
+                            <img class="assigned-btn" src="img/icons8-plus.png" onclick="addUser3()">
+                            <img id="checked3" class="checked" src="img/check-mark-7-24.png">
+                        </div>
+
+                        <div class="add-cancel-btn">
+                            <button class="cancel" onclick="clearInputs()">CANCEL</button>
+                            <button class="task" onclick="addTask()">CREATE TASK</button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+</body>
+
+</html>
